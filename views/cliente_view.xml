@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="tienda_app.cliente_view_tree">
+      <field name="name">Cliente vista tree</field>
+      <field name="model">tienda_app.cliente_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dni"/>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <field name="telf"/>
+          <field name="email" widget="email"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="tienda_app.cliente_view_form">
+      <field name="name">Cliente vista form</field>
+      <field name="model">tienda_app.cliente_model</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+        <group name="grpPadre">
+          <group name="grpIzq">
+            <field name="dni"/>
+            <field name="name"/>
+            <field name="telf"/>
+          </group>
+          <group name="grpDrc">
+            <field name="foto" widget="image"/>
+            <field name="apellidos"/>
+            <field name="email" />
+          </group>
+          <field name="factura_id"/>
+        </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="tienda_app.action_window_cliente">
+      <field name="name">Clientes</field>
+      <field name="res_model">tienda_app.cliente_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+  </data>
+</odoo>

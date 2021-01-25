@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tienda_app_tienda_app,tienda_app.tienda_app,model_tienda_app_tienda_app,base.group_user,1,1,1,1
+access_tienda_app_cliente_model,tienda_app.cliente_model,model_tienda_app_cliente_model,base.group_user,1,1,1,1
+access_tienda_app_factura_model,tienda_app.factura_model,model_tienda_app_factura_model,base.group_user,1,1,1,1
+access_tienda_app_producto_model,tienda_app.producto_model,model_tienda_app_producto_model,base.group_user,1,1,1,1

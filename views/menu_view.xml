@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+
+    <menuitem name="Tienda" id="tienda_app.menu_root"/>
+
+ 
+    <menuitem name="Clientes" id="tienda_app.cliente" parent="tienda_app.menu_root"/>
+    <menuitem name="Lista" id="tienda_app.cliente_lista" parent="tienda_app.cliente"
+              action="tienda_app.action_window_cliente"/>
+  
+    <menuitem name="Facturas" id="tienda_app.factura" parent="tienda_app.menu_root"/>
+    <menuitem name="Lista" id="tienda_app.factura_lista" parent="tienda_app.factura"
+              action="tienda_app.action_window_factura"/>
+  
+    <menuitem name="Producto" id="tienda_app.producto" parent="tienda_app.menu_root"/>
+    <menuitem name="Lista" id="tienda_app.producto_lista" parent="tienda_app.producto"
+              action="tienda_app.action_window_producto"/>
+ 
+
+  </data>
+</odoo>

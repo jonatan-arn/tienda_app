@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+        <record model="ir.ui.view" id="tienda_app.factura_view_tree">
+      <field name="name">Factura vista tree</field>
+      <field name="model">tienda_app.factura_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="fecha"/>
+          <field name="base"/>
+          <field name="iva"/>
+          <field name="total"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="tienda_app.factura_view_form">
+      <field name="name">Factura vista form</field>
+      <field name="model">tienda_app.factura_model</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+        <group name="grpPadre">
+          <group name="grpIzq">
+            <field name="name"/>
+            <field name="Cliente"/>
+          </group>
+          <group name="grpDrc">
+            <field name="fecha" widget="date"/>            
+          </group>
+          <group name="grpIzq1">
+            <field name="base"/>
+            <field name="total"/>
+          </group>
+          <group name="grpDrc2">
+            <field name="iva"/>            
+          </group>
+        </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="tienda_app.action_window_factura">
+      <field name="name">Factura</field>
+      <field name="res_model">tienda_app.factura_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+</odoo>
