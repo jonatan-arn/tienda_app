@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class tienda_app(models.Model):
+class clieten_model(models.Model):
     _name = 'tienda_app.cliente_model'
     _description = 'Modelo de los clientes'
 
@@ -13,6 +13,7 @@ class tienda_app(models.Model):
     apellidos = fields.Char(String = "apellidos",index= True,required=True)
     telf = fields.Integer(String = "telefono",index= True,required=True)
     email = fields.Char(String = "Correo electronico",index= True,required=True)
+    factura_id = fields.One2many("tienda_app.factura_model","Cliente")
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
